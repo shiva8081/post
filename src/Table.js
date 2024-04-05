@@ -1,11 +1,14 @@
 import React from 'react'
 import { Row } from './Row'
 
-export const Table = (items) => {
+export const Table = ({items}) => {
   return (
-    <div className='' >
-        {items.map((item)=>(<Row key={items.id} item={item} />))}
+    <table className='' >
+        <tbody>
 
-    </div>
+        {items.map((item)=>(<Row key={item.id} item={item} />))}
+        </tbody>
+
+    </table>
   )
 }
